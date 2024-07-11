@@ -22,8 +22,12 @@
             "input": "apps/host-application/public"
           }
         ],
-        "styles": ["apps/host-application/src/styles.scss"],
-        "scripts": [],
+        "styles": [
+          "apps/host-application/src/styles.scss",    
+          "node_modules/primeng/resources/primeng.min.css",
+          "node_modules/bootstrap/dist/css/bootstrap.min.css",    
+          "node_modules/primeng/resources/themes/saga-blue/theme.css"],
+        "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
         "customWebpackConfig": {
           "path": "apps/host-application/webpack.config.ts"
         }
@@ -59,7 +63,11 @@
       "executor": "@nx/angular:module-federation-dev-server",
       "options": {
         "port": 4200,
-        "publicHost": "http://localhost:4200"
+        "publicHost": "http://localhost:4200",
+        "skipRemotes": [
+          "user-app",
+          "adm-app"
+        ]
       },
       "configurations": {
         "production": {
