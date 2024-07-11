@@ -1,0 +1,4 @@
+{
+    "adm-app": "http://localhost:4201",
+    "user-app": "http://localhost:4202"
+}
