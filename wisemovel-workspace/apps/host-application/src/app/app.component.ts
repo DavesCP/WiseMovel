@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { Router, RouterModule } from '@angular/router';
 import { TopbarComponent } from "../pages/topbar.component";
 
 @Component({
@@ -8,8 +7,12 @@ import { TopbarComponent } from "../pages/topbar.component";
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [NxWelcomeComponent, RouterModule, TopbarComponent]
+    imports: [RouterModule, TopbarComponent]
 })
 export class AppComponent {
-  title = 'host-application';
+  constructor(private router: Router) {}
+
+  // ngOnInit() {
+  //   this.router.navigate(['/inicio']);
+  // }
 }

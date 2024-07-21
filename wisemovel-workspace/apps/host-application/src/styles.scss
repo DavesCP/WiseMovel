@@ -1,1 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+/* Definindo a camada "bootstrap" */
+@layer bootstrap {
+    @import 'bootstrap/scss/bootstrap';
+}
+
+/* Definindo a camada "primeng" */
+@layer primeng {
+    @import 'primeng/resources/themes/saga-blue/theme.css';
+    @import 'primeng/resources/primeng.min.css';
+    @import "primeicons/primeicons.css";
+}
+
+/* Definindo a camada "custom" */
+@layer custom {
+
+    /* Redefinir estilos de Bootstrap */
+    button {
+        border-radius: 10px !important;
+        /* Redefine o border-radius de todos os botões */
+    }
+
+    /* Redefinir estilos específicos de PrimeNG */
+    .p-button {
+        border-radius: 10px !important;
+        /* Redefine o border-radius dos botões PrimeNG */
+    }
+
+    /* Outros estilos personalizados */
+    // .custom-button {
+    //     border-radius: 10px !important;
+    // }
+}

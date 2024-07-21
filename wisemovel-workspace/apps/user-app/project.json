@@ -22,8 +22,10 @@
             "input": "apps/user-app/public"
           }
         ],
-        "styles": ["apps/user-app/src/styles.scss"],
-        "scripts": [],
+        "styles": [
+          "apps/user-app/src/styles.scss",    
+          "node_modules/bootstrap/dist/css/bootstrap.min.css"],
+        "scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"],
         "customWebpackConfig": {
           "path": "apps/user-app/webpack.config.ts"
         }
